@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jQuery Mobile: Theme Download</title>
+		<link rel="stylesheet" href="themes/mikeStyle.min.css" />
+		<link rel="stylesheet" href="jquery.mobile.structure-1.0.1.min.css" />
+		<script src="jquery-1.6.4.min.js"></script>
+		<script src="jquery.blockUI.js"></script>
+		<script src="jquery.mobile-1.0.1.min.js"></script>
+		<script src="drawLots.js"></script>
+	</head>
+	<body>
+	  <!-- Start of first page: #one --> 
+    <div data-role="page" id="setting"> 
+      <div data-role="header"> 
+      	<h1>抽签程序DEMO</h1> 
+      </div><!-- /header --> 
+    
+      <div data-role="content">	
+  			<div data-role="fieldcontain">
+	     	    <label for="pNumber">人数:</label>
+	     	    <input type="text" name="pNumber" id="pNumber" maxlength="2"/>
+  			</div>        
+  			<div data-role="fieldcontain">
+	     	    <label for="teamNumber">组数:</label>
+	     	    <input type="text" name="teamNumber" id="teamNumber" maxlength="2"/>
+  			</div> 
+  			<div align="center">       
+   			  <input type="button" id="btnOK" value="&nbsp;&nbsp;确定&nbsp;&nbsp;" data-icon="Forward" data-inline="true"/>
+       </div>
+      </div><!-- /content --> 
+      
+      <div data-role="footer" data-position="fixed"> 
+      	<h4>陈欣制作</h4> 
+      </div><!-- /footer --> 
+    </div><!-- /page one --> 
+ 
+ 
+    <!-- Start of second page: #main --> 
+    <div data-role="page" id="main"> 
+     
+    	<div data-role="header" data-position="inline"> 
+        <a href="#" id="btnBack" data-icon="arrow-l" data-role="button" data-back="true" data-direction="reverse">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>    
+    		<h1>抽签程序DEMO</h1> 
+    	</div><!-- /header --> 
+     
+    	<div data-role="content" data-theme="a">	
+       	<div align="center">       
+       	  <h1>
+       	    <a href="#msgbox" data-role="button" data-rel="dialog" data-icon="Forward" data-inline="true" id="btnDrawLots">&nbsp;&nbsp;抽签&nbsp;&nbsp;</a>
+       	  <h1>
+        </div>
+        <div align="center">
+             <a href="#numberPage" id="btnReturnNumber" data-icon="arrow-d" data-role="button" data-rel="dialog" data-inline="true">&nbsp;&nbsp;放回...</a>    
+             <a href="#numberPage" id="btnGetNumber" data-icon="arrow-u" data-role="button" data-rel="dialog" data-inline="true">&nbsp;&nbsp;拿出...</a>    
+       	  </div>
+    	</div><!-- /content --> 
+    	
+    	<div data-role="footer" data-position="fixed"> 
+    		<h4>陈欣制作</h4> 
+    	</div><!-- /footer --> 
+    </div><!-- /page two --> 
+ 
+ 
+    <!-- Start of third page: #msgbox --> 
+    <div data-role="page" id="msgbox"> 
+     
+    	<div data-role="header"> 
+    		<h1>提示</h1> 
+    	</div><!-- /header --> 
+          
+    	<div data-role="content">
+    	  	<center><h1 id="msgText"></h1></center>
+        	<div align="center"> 
+            <a href="#" data-rel="back" data-icon="arrow-l" data-inline="true" data-role="button">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>    
+          </div>    	  	
+    	</div><!-- /content -->
+    	
+    	<div data-role="footer">
+    		<h4>陈欣制作</h4> 
+    	</div><!-- /footer --> 
+    </div><!-- /page popup --> 
+    
+    <div data-role="page" id="numberPage"> 
+     
+    	<div data-role="header"> 
+    		<h1>号码列表</h1> 
+    	</div><!-- /header --> 
+          
+    	<div data-role="content">
+   	  	<ul data-role="listview" id="numberList">
+   	    </ul>  
+    	</div><!-- /content --> 
+    	
+    	<div data-role="footer"> 
+    		<h4>陈欣制作</h4> 
+    	</div><!-- /footer --> 
+    </div><!-- /page popup --> 
+	</body>
+</html>
