@@ -189,4 +189,5 @@ function checkInput(e)
 //test
 function test1(){
 	alert(1);
+	alert(2);
 }
