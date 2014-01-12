@@ -187,4 +187,6 @@ function checkInput(e)
 }
 
 //test
-function test1(){}
+function test1(){
+	alert(1);
+}
